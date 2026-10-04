@@ -1,0 +1,119 @@
+/* ==========================================================================
+   SOUNDARYA OS v1.0 - ROOT CSS VARIABLES & BASE RESET
+   Futuristic Developer Desktop: Deep Navy Black + Electric Blue + Violet
+   ========================================================================== */
+
+:root {
+  /* Dark Navy & Black Background Palette */
+  --bg-deep-navy: #020617;
+  --bg-deep-black: #050816;
+  --bg-desktop: #07111f;
+  --bg-glass-topbar: rgba(6, 11, 25, 0.88);
+  --bg-glass-taskbar: rgba(7, 13, 28, 0.92);
+  --bg-glass-window: rgba(11, 19, 38, 0.90);
+  --bg-window-body: rgba(5, 10, 22, 0.96);
+  --bg-start-menu: rgba(8, 15, 32, 0.96);
+  --bg-card: rgba(15, 23, 42, 0.75);
+  --bg-card-hover: rgba(22, 33, 58, 0.85);
+
+  /* Electric Blue & Violet Accents (Strictly No Pink) */
+  --neon-blue: #3b82f6;
+  --neon-blue-bright: #60a5fa;
+  --neon-blue-deep: #2563eb;
+  --neon-blue-soft: rgba(59, 130, 246, 0.16);
+  --neon-blue-glow: rgba(59, 130, 246, 0.45);
+  --neon-blue-subtle: rgba(59, 130, 246, 0.08);
+
+  --neon-violet: #8b5cf6;
+  --neon-violet-bright: #a78bfa;
+  --neon-violet-deep: #7c3aed;
+  --neon-violet-soft: rgba(139, 92, 246, 0.16);
+  --neon-violet-glow: rgba(139, 92, 246, 0.45);
+  --neon-violet-subtle: rgba(139, 92, 246, 0.08);
+
+  --neon-cyan: #38bdf8;
+  --neon-emerald: #10b981;
+
+  /* Glassmorphism Borders */
+  --blue-border: rgba(59, 130, 246, 0.35);
+  --blue-border-glow: rgba(59, 130, 246, 0.85);
+  --violet-border: rgba(139, 92, 246, 0.35);
+  --violet-border-glow: rgba(139, 92, 246, 0.85);
+  --border-subtle: rgba(148, 163, 184, 0.15);
+
+  /* Typography Colors */
+  --text-white: #ffffff;
+  --text-light-gray: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-blue: #60a5fa;
+  --text-violet: #a78bfa;
+
+  /* Fonts */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: 'Orbitron', -apple-system, sans-serif;
+
+  /* Dimensions */
+  --topbar-height: 38px;
+  --taskbar-height: 48px;
+
+  /* Geometry & Glass */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --backdrop-blur: blur(16px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-deep-navy);
+  color: var(--text-white);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
